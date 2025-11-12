@@ -14,10 +14,22 @@
 
   <style>
     @font-face {
-      font-family: 'Titres';
+      font-family: 'base';
       src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
-      font-weight: 100 900;
-      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'title';
+      src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    }
+
+    * {
+      font-family: 'base';
+    }
+
+    h1,
+    h2 {
+      font-family: 'title', sans-serif;
     }
 
     .attribution {
@@ -29,37 +41,17 @@
       color: hsl(228, 45%, 44%);
     }
 
-    .bg-primary {
-      background-color: rgb(106, 63, 63)
-    }
-
-    .text-primary {
-      color: rgb(106, 63, 63)
-    }
-
     .bg-secondary {
       background-color: rgb(255, 222, 201)
-    }
-
-    .text-secondary {
-      color: rgb(106, 63, 63)
-    }
-
-    .bg-accent {
-      background-color: rgb(106, 63, 63)
-    }
-
-    .text-accent {
-      color: rgb(106, 63, 63)
     }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-[#E7DACD] flex justify-center items-start min-h-screen p-6 ">
-  <div class="py-2 px-4 mx-2 my-4 bg-[#F2F2F2] rounded-3xl">
-    <img src="./assets/images/image-omelette.jpeg">
-    <h1 class="text-3xl font-bold font-titres">Simple Omelette Recipe</h1>
+<body class="bg-[#E7DACD] flex justify-center items-start min-h-screen sm:p-6">
+  <div class="p-12 sm:mx-2 sm:my-5 bg-[#F2F2F2] rounded-3xl max-w-5xl space-y-8">
+    <img src="./assets/images/image-omelette.jpeg" class="rounded-xl">
+    <h1 class="text-5xl font-bold ">Simple Omelette Recipe</h1>
     <p>
       An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked
       to perfection, optionally filled with your choice of cheese, vegetables, or meats.
@@ -80,68 +72,93 @@
       </ul>
     </div>
     <div class="px-4 py-4">
-      <h2>Ingredients</h2>
+      <h2 class="text-red-900 font-semibold pb-2 text-2xl">Ingredients</h2>
       <ul class="list-disc">
-        <li>2-3 large eggs</li>
-        <li>Salt, to taste</li>
-        <li>Pepper, to taste</li>
-        <li>1 tablespoon of butter or oil</li>
-        <li>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+        <li class="pl-4 py-1">2-3 large eggs</li>
+        <li class="pl-4 py-1">Salt, to taste</li>
+        <li class="pl-4 py-1">Pepper, to taste</li>
+        <li class="pl-4 py-1">1 tablespoon of butter or oil</li>
+        <li class="pl-4 py-1">Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
       </ul>
+
     </div>
-    <hr />
+    <hr class="h-px my-8 bg-gray-300 border-0" />
     <div class="py-4 px-4">
-      <h2>Instructions</h2>
-      <ol class="list-decimal">
-        <li>
-          Beat the eggs: In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed.
-          You can add a tablespoon of water or milk for a fluffier texture.
+
+      <h2 class="text-red-900 text-2xl font-semibold pb-2">Instructions</h2>
+      <ol class="list-decimal text-red-900">
+        <li class="ml-2 pl-4 py-1">
+          <span class="text-black">
+            <bold class="font-semibold">Beat the eggs</bold>: In a bowl, beat the eggs with a pinch of salt and pepper
+            until they are well mixed.
+            You can add a tablespoon of water or milk for a fluffier texture.
+          </span>
         </li>
-        <li>
-          Heat the pan: Place a non-stick frying pan over medium heat and add butter or oil.
+        <li class="ml-2 pl-4 py-1">
+          <span class="text-black">
+            <bold class="font-semibold">Heat the pan</bold>: Place a non-stick frying pan over medium heat
+            and add butter or oil.
+          </span>
         </li>
-        <li>
-          Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure
-          the eggs evenly coat the surface.
+        <li class="ml-2 pl-4 py-1">
+          <span class="text-black">
+            <bold class="font-semibold">Cook the omelette</bold>: Once the butter is melted and bubbling, pour in the
+            eggs. Tilt the pan to ensure
+            the eggs evenly coat the surface.
+          </span>
         </li>
-        <li>
-          Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the
-          middle, sprinkle your chosen fillings over one half of the omelette.
+        <li class="ml-2 pl-4 py-1">
+          <span class="text-black">
+            <bold class="font-semibold">Add fillings</bold> (optional): When the eggs begin to set at the edges but are
+            still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.
+          </span>
         </li>
-        <li>
-          Fold and serve: As the omelette continues to cook, carefully lift one edge and fold it over the
-          fillings. Let it cook for another minute, then slide it onto a plate.
+        <li class="ml-2 pl-4 py-1">
+          <span class="text-black">
+            <bold class="font-semibold">Fold and serve:</bold> As the omelette continues to cook,
+            carefully lift one
+            edge
+            and fold it over the
+            fillings. Let it cook for another minute, then slide it onto a plate.
+          </span>
         </li>
-        <li>
-          Enjoy: Serve hot, with additional salt and pepper if needed.
+        <li class="ml-2 pl-4 py-1">
+          <span class="text-black">
+            <bold class="font-semibold">Enjoy</bold>: Serve hot, with additional salt and pepper if needed.
+          </span>
         </li>
       </ol>
     </div>
-    <hr />
+    <hr class="h-px my-8 bg-gray-300 border-0" />
     <div class="py-4 px-4">
-      <h2>Nutrition</h2>
+      <h2 class="text-red-900 text-2xl font-semibold pb-2">Nutrition</h2>
 
       <p>The table below shows nutritional values per serving without the additional fillings.</p>
-      <table>
-        <tbody>
-          <tr>
-            <td>Calories</td>
-            <td>277kcal</td>
-          </tr>
-          <tr>
-            <td>Carbs</td>
-            <td>0g</td>
-          </tr>
-          <tr>
-            <td>Protein</td>
-            <td>20g</td>
-          </tr>
-          <tr>
-            <td>Fat</td>
-            <td>22g</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="p-4">
+        <table class="w-full border-collapse">
+          <tbody class="divide-y divide-gray-300">
+            <tr class="h-10">
+              <td class="py-2 text-gray-700">Calories</td>
+              <td class="py-2 text-md font-semibold text-red-900">277kcal</td>
+            </tr>
+
+            <tr class="h-10">
+              <td class="py-2 text-gray-700">Carbs</td>
+              <td class="py-2 text-md font-semibold text-red-900">0g</td>
+            </tr>
+
+            <tr class="h-10">
+              <td class="py-2 text-gray-700">Protein</td>
+              <td class="py-2 text-md font-semibold text-red-900">20g</td>
+            </tr>
+
+            <tr class="h-10">
+              <td class="pt-2 pb-1 text-gray-700">Fat</td>
+              <td class="pt-2 pb-1 text-md font-semibold text-red-900">22g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
     <div class="attribution">
